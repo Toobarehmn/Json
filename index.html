@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Accessories</h1>
+    </center>
+    <table align="center" border="2px" width="100%">
+        <tr>
+            <td id="name1"></td>
+            <td id="des1"></td>
+            <td id="price1"></td>
+        </tr>
+        <tr>
+            <td id="name2"></td>
+            <td id="des2"></td>
+            <td id="price2"></td>
+            
+        </tr>
+    </table>
+    <script type="text/javascript" src="data index.json"></script>
+    <script>
+        const obj = JSON.parse(data);
+        var name1 = document.getElementById('name1');
+        var name2 = document.getElementById('name2');
+        name1.innerHTML= obj[0]['name'];
+        name2.innerHTML= obj[1]['name'];
+        var des1 = document.getElementById('des1');
+        var des2 = document.getElementById('des2');
+        des1.innerHTML= obj[0]['description'];
+        des2.innerHTML= obj[1]['description'];
+        var price1 = document.getElementById('price1');
+        var price2 = document.getElementById('price2');
+        price1.innerHTML= obj[0]['price'];
+        price2.innerHTML= obj[1]['price']
+    </script>
+</body>
+</html>
